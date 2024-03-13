@@ -9,11 +9,8 @@
     font-size: 18px;
   }
   .header,article,footer{
-    /* --- 修正 --- */
-    /* width: 980px; */
-    /* max-width: 100%; レスポンシブ対応 */
     max-width: 980px;
-    width: 100%;
+    width: 100%; /* レスポンシブ対応 */
     margin: 0 auto;
   }
   h1{
@@ -57,8 +54,6 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    /* --- 修正 --- */
-    /* justify-content: space-between; */
     justify-content: center;
     column-gap: 40px;
   }
@@ -86,8 +81,6 @@
 
 /* works */
   .content{
-    /* --- 修正 --- */
-    /* width: 70%; */
     width: 80%;
     margin: 0 auto;
   }
