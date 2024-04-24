@@ -1,0 +1,24 @@
+/*! --- MISSION --- */
+#mission {
+  margin: 80px auto;
+  width: 100%;
+  &-flex {
+    width: 100%;
+    display: flex;
+    @include media(sp) {
+      flex-direction: column;
+    }
+    > div {
+      width: 50%;
+      margin: 20px;
+    }
+  }
+  &-photo {
+    width: 100%;
+  }
+}
+
+#s2dgs {
+  margin-top: 50px;
+  width: 100%;
+}

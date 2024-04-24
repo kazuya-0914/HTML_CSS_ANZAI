@@ -1,0 +1,38 @@
+// ブレイクポイント -----
+$breakpoints: (
+  sp: "max-width: 767px",
+  pc: "mix-width: 768px",
+);
+@mixin media($breakpoint) {
+  @media screen and (#{map-get($breakpoints, $breakpoint)}) {
+    @content;
+  }
+}
+
+// 色関係の設定 -----
+$c-blue : #2710d5;
+$c-light: #fafafa;
+$c-snow : #ececec;
+$c-black: #0d0d0d;
+$c-gray : #707070;
+$c-white: #ffffff;
+$c-red  : #ce2222;
+
+// アンカー -----
+$color-nav : #0d0d0d;
+
+// フォント関連 -----
+$font-base: "Source Sans Pro", "Hiragino Kaku Gothic ProN", Meiryo, Arial, sans-serif;
+
+// それぞれのSCSSの読み込み -----
+@import "mixin";
+@import "common";
+@import "header";
+@import "main";
+@import "mission";
+@import "product";
+@import "aboutus";
+@import "vision";
+@import "company";
+@import "contact";
+@import "footer";

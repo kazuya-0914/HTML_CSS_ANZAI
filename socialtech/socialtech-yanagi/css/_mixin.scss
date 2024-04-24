@@ -1,0 +1,19 @@
+// border関連 -----
+@mixin borderBottom($color) {
+  border-bottom: solid 1px $color;
+}
+@mixin borderTop($color) {
+  border-top: solid 1px $color;
+}
+
+// z-index -----
+$layer: (
+  main-img: 10,
+  main-text: 11,
+  vision-img: 30,
+  vision-span: 31,
+  sp-menu: 100,
+);
+@mixin z-index($key) {
+  z-index: map-get($layer, $key);
+}

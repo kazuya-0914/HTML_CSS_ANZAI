@@ -1,0 +1,111 @@
+@charset "utf-8";
+/* --------------------------------------------------------
+	responsive
+-------------------------------------------------------- */
+@media screen and (max-width: 767px) {
+	.content{
+		width: 100%;
+		max-width: 767px; /* レスポンシブ対応 */
+		margin: 0 auto;
+		padding: 0 1rem;
+	}
+	/*---------------------------------
+ header
+	----------------------------------*/
+	#header{
+		position: relative;
+		width: 100%;
+  height: 80vh;
+		box-sizing: border-box;
+		background-image: url('../img/headerView.webp');
+		margin-bottom: 3rem;
+	}
+	#header h1{
+		width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+		right: 50%;
+		filter: drop-shadow(0 5px 10px rgba(224, 48, 48, 0.9));
+	}
+
+	#header ul li{
+		padding: 2rem 0;
+	}
+	#header ul li a{
+		display: block;
+  padding:10px 15px;
+		font-weight: 900;
+		color: #ffffff;
+		text-shadow: 0.1rem 0.1rem 0.2rem rgb(224, 48, 48);
+ 	/*はみ出る要素を隠す*/
+		overflow: hidden;
+		position: relative;
+	}
+	/*---------------------------------
+ パララックストップ
+	----------------------------------*/
+	#MENU div,
+	#ABOUT div,
+	#LOCATION div{
+		height: 30svh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+ }
+	#MENU .parallax_bg {
+		width: 100%;
+		height: auto;
+		background-image: url('../img/menu.webp') ;
+		background-attachment: local;
+	}
+	#ABOUT .parallax_bg{
+		width: 100%;
+		height: auto;
+		background-image: url('../img/about.webp');
+  background-attachment: local;
+ }
+	#LOCATION .parallax_bg{
+		width: 100%;
+		height: auto;
+		background-image: url('../img/location.webp');
+  background-attachment: local;
+ }
+	#MENU .parallax_bg h2,
+	#ABOUT .parallax_bg h2,
+	#LOCATION .parallax_bg h2{
+		color: #ffffff;
+		font-size: 3rem;
+		padding: 1rem 0;
+ }
+	/*---------------------------------
+ MENU DRINK
+	----------------------------------*/
+	.content .article{
+		margin: 0 1rem;
+		display: block;
+		padding: 1rem 0 5rem;
+	}
+	.content .article .Box{
+		width: 100% ;
+		text-align: center;
+	}
+	/*---------------------------------
+ ABOUT COFFEE History
+	----------------------------------*/
+	.content ul{
+		display: block;
+		}
+		.content ul li{
+			width: 100%;
+			text-align: left;
+			margin-bottom: 3rem;
+		}
+
+
+
+
+
+
+
+}

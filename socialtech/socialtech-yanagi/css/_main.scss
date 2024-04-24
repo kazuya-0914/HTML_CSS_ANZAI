@@ -1,0 +1,38 @@
+/* --- メインビジュアル--- */
+#main- {
+  &visual {
+    position: relative;
+    height: 400px;
+    > img {
+      max-width: 620px;
+      border-radius: 476px 0 0 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+      @include z-index(main-img);
+    }
+  }
+  &message {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #2710d5;
+    color: #ffffff;
+    border-radius: 0 0 476px 0;
+    max-width: 620px;
+    height: 100%;
+    width: 100%;
+    @include z-index(main-text);
+    > h1 {
+      font: {
+        size: 60px;
+        weight: bold;
+      }
+      margin: 100px 0 0 50px;
+    }
+    > p {
+      font-size: 28px;
+      margin: 0 0 0 50px;
+    }
+  }
+}

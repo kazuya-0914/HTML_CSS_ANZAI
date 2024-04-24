@@ -1,0 +1,398 @@
+@charset "utf-8";
+/* --------------------------------------------------------
+	responsive.css
+-------------------------------------------------------- */
+
+
+.br-sp { display: none; }
+
+@media (max-width: 900px) {
+	.br-sp { display: block; }
+
+/* ---------------------------
+見出し共通
+--------------------------- */
+h2{
+	text-align: center;
+	font-size: 2rem;
+	font-weight: 900;
+	padding-top: 3rem;
+}
+hr{
+	width: 150px;
+	margin: 1rem auto 3rem;
+	border-bottom: #505050 3px solid;
+	border-radius: 3px;
+}
+
+/*=============================
+header
+=============================*/
+h1#logo{
+	width: 30%;
+	padding: 1.8rem 0 0 2rem;
+}
+nav > p#logo{
+	width: 30%;
+	padding: 1.8rem 0 0 2rem;
+}
+#logo img{
+	width: 6.5rem;
+}
+
+/* ---------------------------
+hamburger
+--------------------------- */
+
+.hamburger{
+	width: 70px;
+	height: 70px;
+	/* background-color: #ff2a2a;
+	position:fixed;
+	top:0;
+	right:0px;
+	cursor: pointer;
+	transition: 0.3s; */
+}
+.hamburger:hover,
+.hamburger:active{
+	opacity: 0.5;
+}
+.hamburger span {
+	width: 30px;
+	height: 3px ;
+	border-radius: 3px;
+	background: #fff;
+	position: absolute;
+	left: 20px;
+}
+/* 1本目 */
+.hamburger span:nth-child(1) {
+	top: 20px;
+}
+/* 2本目 */
+.hamburger span:nth-child(2) {
+	top: 35px;
+}
+/* 3本目 */
+.hamburger span:nth-child(3) {
+	top: 50px;
+}
+/* 1本目の線は-45度回転 */
+.hamburger.active span:nth-child(1) {
+	top: 45px;
+	left: 20px;
+	background :#fff;
+	transform: rotate(-45deg);
+	transition: all 0.5s 0s ease-in-out;
+}
+/* 2本目は消去 */
+.hamburger.active span:nth-child(2){
+	display: none;
+	transition: all 0s 0s ease-in-out;
+}
+/* 3本目は45度回転 */
+.hamburger.active span:nth-child(3) {
+	top: 45px;
+	background: #fff;
+	transform: rotate(45deg);
+	transition: all 0.5s 0s ease-in-out;
+}
+/*=============================
+headerimg メイン画像 話して学ぼう！ 無料体験はこちら
+=============================*/
+#headerimg{
+	position: relative;
+	width: 100%;
+	margin: 0 auto -10rem;
+	padding: 0;
+}
+
+#headerimg .slideanime{
+	width: 100%;
+	height: 45rem;
+	margin-top: 6.25rem;
+	margin-left: auto;
+	/* はみ出し防止 */
+	overflow: hidden;
+	position: relative;
+}
+
+/*------------------------
+話して学ぼう！ 無料体験はこちら
+ ------------------------ */
+
+#headerimg .catch{
+	width: 90%;
+  position: absolute;
+  top: 18rem;
+  left: 1rem;
+}
+#headerimg .catch .text{
+  font-size: 2rem;
+  font-weight: 900;
+  color: #333333;
+  text-shadow: 5px 3px 6px rgb(255, 255, 255);
+  margin-bottom: 1.5rem;
+}
+
+/* 無料体験はこちら */
+#headerimg .catch a{
+	display: block;
+	padding: 1rem 1rem;
+	font-size: 1.5rem;
+	color: #fff;
+	background-color: #ff2a2a;
+	border-radius: 10px;
+	transition: .3s;
+	border-bottom: 5px solid #9a0413;
+	position: relative;
+}
+/* 無料体験はこちらの「＞」 */
+#headerimg .catch .btn::after{
+	content: "";
+	width: 16px;
+	height: 16px;
+	border-top: solid 3px #fff;
+	border-right: solid 3px #fff;
+	transform: rotate(45deg);
+	position: absolute;
+	top: 26px;
+	right: 30px;
+}
+#headerimg .catch a:hover,
+#headerimg .catch a:active{
+	transform: scale(1.1);
+}
+
+
+
+
+/* ---------------------------
+BBBが選ばれる理由
+--------------------------- */
+/*===========
+inview   左から
+===========*/
+.fadeIn_left {
+	opacity: 0;
+	transform: translate(-50%, 0);
+	transition: 2s;
+}
+.fadeIn_left.is-show {
+	transform: translate(0, 0);
+	opacity: 1;
+}
+/*===========
+inview   右から
+===========*/
+.fadeIn_right {
+	opacity: 0;
+	transform: translate(50%, 0);
+	transition: 2s;
+	transition-delay: 1s;
+}
+.fadeIn_right.is-show {
+	transform: translate(0, 0);
+	opacity: 1;
+}
+
+#reason{
+	background-color: #ff2a2a;
+	padding: 3rem 0;
+}
+#reason .move ul.leftBox{
+	width: 94%;
+	background-color: #fff;
+	padding: 0.8rem 1.2rem;
+	border-radius: 0 15px 15px 0;
+	margin-bottom: 2rem;
+}
+#reason .move ul.rightBox{
+	width: 94%;
+	background-color: #fff;
+	padding: 0.8rem 1.2rem;
+	border-radius: 15px 0 0 15px;
+}
+#reason .move ul li .text{
+	font-size: 1.2rem;
+}
+
+/* ---------------------------
+受講生の声
+--------------------------- */
+#voice{
+	padding: 0 0 2rem;
+}
+#voice .item-left,
+#voice .item-right{
+	/* display: block; */
+	/* justify-content: space-between; */
+	width: 100%;
+	margin-bottom: 2rem;
+}
+#voice .item-left{
+	/* 下から順に表示 */
+	flex-direction: column-reverse;
+	margin: 0 auto;
+}
+#voice .item-right{
+		/* 上から順に表示 */
+	flex-direction: column;
+	margin: 0 auto;
+}
+
+#voice .item-left .Infoitem {
+	width: 40%;
+	margin: 0 auto;
+}
+#voice .item-right .Infoitem {
+	width: 40%;
+	margin: 0 auto;
+}
+
+
+/* ---------------------------
+左側の設定
+--------------------------- */
+#voice .item-left .Infoitem img{
+	margin: 0 auto;
+	width: 8rem;
+	height: 8rem;
+	border-radius:50%;
+	background-color: #cccccc;
+}
+#voice .item-left .Infoitem .name{
+	font-size: 0.7rem;
+	padding-top: 0.7rem;
+	text-align: center;
+}
+
+/* 左の吹き出しbox */
+#voice .item-left .textitem{
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	
+
+
+	margin: 2rem 15px 2rem 0;
+	padding: 7px 10px;
+	/* background-color: #e9f1fb; */
+	border-radius: 10px;
+}
+/* 下に吹き出し */
+#voice .item-left .textitem:before {
+	content: "";
+	position: absolute;
+	top: 115%;
+	left: 50%;
+	margin-left: -15px;
+	border: 15px solid transparent;
+	border-top: 15px solid #e9f1fb;
+}
+
+
+
+/* ---------------------------
+右側の設定
+--------------------------- */
+#voice .item-right .Infoitem img{
+	margin: 0 auto;
+	width: 8rem;
+	height: 8rem;
+	border-radius:50%;
+	background-color: #cccccc;
+}
+#voice .item-right .Infoitem .name{
+	font-size: 0.7rem;
+	padding-top: 0.7rem;
+	text-align: center;
+}
+
+/* 右の吹き出しbox */
+#voice .item-right .textitem{
+	position: relative;
+	display: inline-block;
+	margin: 2em 15px 2em 0;
+	padding: 7px 10px;
+	background-color: #e9f1fb;
+	border-radius: 10px;
+}
+/* 下に吹き出し */
+#voice .item-right .textitem:before {
+	content: "";
+	position: absolute;
+	top: 115%;
+	left: 50%;
+	margin-left: -15px;
+	border: 15px solid transparent;
+	border-top: 15px solid #e0edff;
+}
+
+/* アニメーションを実行 */
+#voice .balloon {
+	animation: balloon 0.5s ease-out 0s 1 forwards;
+}
+/* 最初は「transform: scale(0.1);」で要素を小さくした状態で、
+「opacity: 0;」で非表示にしておく
+0.5秒かけて要素を表示させながら元のサイズへ戻す */
+@keyframes balloon {
+	0% {
+			transform: scale(0.1);
+			opacity: 0;
+	}
+	100% {
+			transform: scale(1);
+			opacity: 1;
+	}
+}
+
+/* ---------------------------
+スクールの概要    水玉ループ
+--------------------------- */
+	.menu li{
+		width: 100%;
+	}
+
+	/* ---------------------------
+	無料体験申し込み
+	--------------------------- */
+	#entry .title{
+		font-size: 1.6rem;
+	}
+	#entry .entrybtn{
+		width: 98%;
+		margin: 0 auto;
+	}
+	#entry .entrybtn a{
+		display: block;
+		padding: 18px 0;
+		font-size: 1.8rem;
+	}
+	#entry .entrybtn a:hover,
+	#entry .entrybtn a:active{
+		display: block;
+		padding: 18px 0;
+		box-sizing: border-box;
+		transition: 0.5s;
+	}
+
+	/*=============================
+	footer
+	=============================*/
+	footer .container .inner li{
+		width: calc(100% / 2 - 2%);
+		padding-top: 2rem;
+	}
+
+
+}
+
+@media screen and (max-width: 559px){
+	/* SPのみで表示 */
+	.pc { display: none; }
+	.sp { display: block; }
+	img { max-width: 100%; }
+			}
+	
